@@ -81,3 +81,10 @@ The next model that I decided to run was from the same family (qwen3:8b), with a
 The qwen3:8b model is trained off slightly more tha double the amount of tokens (36 trillion). However, it has a context window of 32k compared to 128k tokens that llama3.1:8b has.
 
 The qwen3:8b model produced a smaller tokens/second, standing at roughly 66 tokens/s. 
+
+# Tiktokenizer Notes
+
+After a couple minutes of experimentation, I found it surprising that the same word typed in the same format repeatedly would sometimes be broken down into different tokens.
+
+Some research that I did showed that common words are oftentimes algorithmically broken down into a single token, while more complex or uncommon words can be broken down into pairs, or pieces of tokens. For example, a word like tokenization may get broken down into "token" + "ization". 
+
