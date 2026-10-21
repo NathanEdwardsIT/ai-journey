@@ -117,3 +117,10 @@ This uses the pathlib library to help find the system.json file, and using json.
 If system.json does not exist, it simply resorts to an empty conversation using an empty history[] list.
 
 This allows the chatbot to read from a pre-existing conversation, rather than only having the memory of a single one.
+
+# Tokens/s JSON file addition
+
+I added a variable called "tokens_per_second" which follows the same formatting as above. Takes in the amount of tokens / (duration / 1e9) to determine tokens/s. 
+
+Then, I used an fstring to turn that into a readable string, then using an .append() function to add it to the json file.
+

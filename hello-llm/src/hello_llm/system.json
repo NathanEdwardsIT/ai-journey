@@ -14,5 +14,45 @@
   {
     "role": "assistant",
     "content": "Your first input was \"helloi\"."
+  },
+  {
+    "role": "user",
+    "content": "testing"
+  },
+  {
+    "role": "assistant",
+    "content": "It looks like you're just testing the conversation. Nothing much happening so far, but I'm here if you need anything or just want to chat!"
+  },
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "assistant",
+    "content": "Still testing, I presume?"
+  },
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "assistant",
+    "content": "You're really putting me through a test here!"
+  },
+  {
+    "role": "system",
+    "content": "Tokens/s: 53.0"
+  },
+  {
+    "role": "user",
+    "content": "test"
+  },
+  {
+    "role": "assistant",
+    "content": "I think I've got the message: You're testing the conversation limits!"
+  },
+  {
+    "role": "system",
+    "content": "Tokens/s: 81.7"
   }
 ]
