@@ -1,0 +1,18 @@
+[
+  {
+    "role": "user",
+    "content": "helloi"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! It's nice to meet you. Is there something I can help you with or would you like to chat?"
+  },
+  {
+    "role": "user",
+    "content": "what was my first input?"
+  },
+  {
+    "role": "assistant",
+    "content": "Your first input was \"helloi\"."
+  }
+]

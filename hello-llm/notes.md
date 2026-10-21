@@ -107,3 +107,13 @@ Then, I went ahead and deleted this line:
 history.append({"role": "user", "content": user_text})
 
 Which breaks things in a different way. What this does is completely removes the feature that appends my input to the history list. This breaks the model because this line comes before it goes to read my input in order to formulate a reply. With no question/input, it has nothing to answer and thus breaks.
+
+# Changes & Additions to the Chatbot
+
+The change I made in this new version is that I have the chatbot save the inputs & outputs of each conversation to a file called 'system.json'. 
+
+This uses the pathlib library to help find the system.json file, and using json.load() and json.dump() to read and write to it. 
+
+If system.json does not exist, it simply resorts to an empty conversation using an empty history[] list.
+
+This allows the chatbot to read from a pre-existing conversation, rather than only having the memory of a single one.
