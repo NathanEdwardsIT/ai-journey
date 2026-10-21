@@ -88,3 +88,22 @@ After a couple minutes of experimentation, I found it surprising that the same w
 
 Some research that I did showed that common words are oftentimes algorithmically broken down into a single token, while more complex or uncommon words can be broken down into pairs, or pieces of tokens. For example, a word like tokenization may get broken down into "token" + "ization". 
 
+# Chatbot.py Notes
+
+The simple chatbot that I created has one key thing to note: It reads the entire conversation history every time it goes to produce a reply. This is because at the top there is an empty list called "history", that appends user input & model response into it. 
+
+What this means is that the model itself has no memory. The "memory" it has is because each and every message + response is added to a list that it then reads from before responding.
+
+# How I Broke the Chatbot
+
+Firstly, I went ahead and deleted the following line:
+
+history.append({"role": "assistant", "content": answer})
+
+This is the line that appends the chatbot's response to the "history" list. When this line is removed, it means that the chatbot can only ever see my previous inputs, and not the responses it has given. This means it will consistently answer the same questions again as it does not know it already answered it.
+
+Then, I went ahead and deleted this line:
+
+history.append({"role": "user", "content": user_text})
+
+Which breaks things in a different way. What this does is completely removes the feature that appends my input to the history list. This breaks the model because this line comes before it goes to read my input in order to formulate a reply. With no question/input, it has nothing to answer and thus breaks.
